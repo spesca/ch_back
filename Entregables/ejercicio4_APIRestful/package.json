@@ -1,0 +1,17 @@
+{
+  "name": "apirestful",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "author": "sharon",
+  "license": "ISC",
+  "dependencies": {
+    "-": "^0.0.1",
+    "express": "^4.17.1",
+    "g": "^2.0.1",
+    "moment": "^2.29.1"
+  },
+  "description": ""
+}
