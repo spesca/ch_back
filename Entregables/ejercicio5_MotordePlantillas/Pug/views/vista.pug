@@ -1,0 +1,28 @@
+extends layout
+
+block content
+	h1(style="color:blue;")
+		center='Vista de Productos'
+	if listExists
+		div(class="container")
+			div(class="row")
+				div(class="col")
+					table(class="table table-striped table-bordered table-hover table-dark")
+						thead
+							tr
+								th Nombre
+								th Precio
+								th Foto URL
+						tbody
+							each val in productList
+								tr
+									td=val.title
+									td=val.price
+									td
+										img(src=val.thumbnail)
+	else
+		h1(style="color:green;")
+			center='No se encontraron productos'
+	
+	form(action="/" method="GET")
+		button.btn.btn-primary(type="submit", name="vista") Cargar Productos

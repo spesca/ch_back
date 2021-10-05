@@ -1,0 +1,22 @@
+extends layout
+
+block content
+    h1(style="color:blue;")
+        center='Ingrese un Producto'
+    br
+    form(action="/productos" method="POST")
+        div.form-group
+            label(for='nombre') Nombre
+            input#nombre.form-control(type='text', name='title')
+        div.form-group
+            label(for='precio') Precio
+            input#precio.form-control(type='number', name='price')
+        div.form-group
+            label(for='fotourl') Foto URL
+            input#fotourl.form-control(type='text', name='thumbnail')
+        button.btn.btn-primary(type="submit", name="enviar") Enviar
+
+    form(action="/productos" method="GET")
+        button.btn.btn-primary(type="submit", name="vista") Vista Productos
+
+    
